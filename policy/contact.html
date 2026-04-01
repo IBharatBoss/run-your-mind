@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | RUN YOUR MIND</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="page-shell" style="box-shadow: none; max-width: 900px;">
+        <header class="top-header editorial-header-flow">
+            <div class="header-left">
+                <a href="../index.html" class="back-to-library">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    <span class="back-text">Back to Library</span>
+                </a>
+            </div>
+            <div id="logo-container" class="logo-container">
+                <img src="../logo.png" onerror="this.onerror=null;this.src='../run-your-mind.png';" alt="Run Your Mind" class="top-logo" width="220" height="55" id="top-logo" style="width: 130px; min-width: 120px; margin: 0;">
+                <img id="founder-img" src="../me.jpg" alt="Founder" width="380" height="380" loading="lazy" onerror="this.src='https://via.placeholder.com/60';">
+                <span id="founder-text">FOUNDER</span>
+            </div>
+            <div class="header-right"></div>
+        </header>
+
+        <main class="editorial-article">
+            <article>
+                <header>
+                    <h1 class="serif-heading">Contact Us</h1>
+                    <p class="editorial-subtitle">We are always here to help you grow.</p>
+                </header>
+
+                <p>If you face any issues with your premium account, payment, or just want to share your thoughts on a recent article, please feel free to reach out to us directly.</p>
+
+                <h2 style="border-bottom-color: var(--accent-blue);">1. Email Support</h2>
+                <p>The fastest way to reach the founder and the support team is via email. We read everything and typically respond within 24 hours.</p>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:ibbchoudhary@gmail.com" style="color: var(--accent-coral); font-weight: 600;">ibbchoudhary@gmail.com</a></li>
+                </ul>
+
+                <h2 style="border-bottom-color: var(--accent-yellow);">2. Product Information</h2>
+                <p><strong>Product Name:</strong> Run Your Mind Premium Library<br>
+                <strong>Pricing Structure:</strong> A single, one-time payment for lifetime access (Please refer to the platform checkout for the current active pricing).</p>
+
+                <h2 style="border-bottom-color: var(--accent-mint);">3. Registered Operating Address</h2>
+                <p>Run Your Mind is operated from our registered address in India:</p>
+                <div class="highlight-box">
+                    <p style="margin: 0; color: var(--ink);">
+                        <strong>Bharat Kumar Patel</strong><br>
+                        C Block, 297, Fourth Floor,<br>
+                        Nehru Vihar, Delhi 110054<br>
+                        India
+                    </p>
+                </div>
+
+                <div class="author-credit">
+                    <img src="../me.jpg" alt="Bharat Kumar Patel" class="author-avatar" width="60" height="60" loading="lazy" onerror="this.src='https://via.placeholder.com/60';">
+                    <div class="author-details">
+                        <span class="author-title">FOUNDER & AUTHOR</span>
+                        <h4 class="author-name">Bharat Kumar Patel</h4>
+                        <a href="mailto:ibbchoudhary@gmail.com" class="author-email">ibbchoudhary@gmail.com</a>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <footer class="app-footer">
+            <details class="editorial-accordion">
+                <summary class="accordion-header">THE MISSION</summary>
+                <div class="accordion-content">
+                    <p>In an era of noise and information overload, our mission is simple: to provide distilled, executable intellect for modern minds seeking rapid, high-quality growth without the fluff.</p>
+                    <p>Internet articles are often written for engagement, not execution. Every piece of content here undergoes a rigorous distillation process to provide only core actionable strategies.</p>
+                </div>
+            </details>
+
+            <div class="footer-credits">
+                <p>© 2026 RUN YOUR MIND · All rights reserved</p>
+            </div>
+        </footer>
+
+    </div>
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>
