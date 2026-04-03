@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | RUN YOUR MIND</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="page-shell" style="box-shadow: none; max-width: 900px;">
+        <header class="top-header editorial-header-flow">
+            <div class="header-left">
+                <a href="../index.html" class="back-to-library">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    <span class="back-text">Back to Library</span>
+                </a>
+            </div>
+            <div id="logo-container" class="logo-container">
+                <img src="../logo.png" onerror="this.onerror=null;this.src='../run-your-mind.png';" alt="Run Your Mind" class="top-logo" width="220" height="55" id="top-logo" style="width: 130px; min-width: 120px; margin: 0;">
+                <div id="founder-card" class="founder-card">
+                    <p>If you want to know your true character,<br>look at how you treat someone<br>who can do absolutely nothing for you.</p>
+                </div>
+                <button id="founder-close-btn" class="founder-close-btn" aria-label="Close image">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div class="header-right"></div>
+        </header>
+
+        <main class="editorial-article">
+            <article>
+                <header>
+                    <h1 class="serif-heading">Terms & Conditions</h1>
+                    <p class="editorial-subtitle">The simple, straightforward rules for using our platform.</p>
+                </header>
+
+                <p>Welcome to Run Your Mind. By accessing and purchasing from our platform, you agree to these simple terms of service. We like to keep things human and fair.</p>
+
+                <h2 style="border-bottom-color: var(--accent-blue);">1. Lifetime Access & Pricing</h2>
+                <p>We charge a single, one-time fee for lifetime premium access to our curated library. There are no hidden subscription fees or recurring charges. The current pricing is always displayed clearly on our authentication page. Your access is tied permanently to the Google Email account you used during signup.</p>
+
+                <h2 style="border-bottom-color: var(--accent-mint);">2. Personal Use Only</h2>
+                <p>Your premium account is designed specifically for your personal growth. Sharing your account credentials with multiple people is strictly prohibited. Our system actively monitors concurrent logins and reserves the right to suspend accounts showing suspicious sharing activity.</p>
+
+                <h2 style="border-bottom-color: var(--accent-red);">3. Intellectual Property</h2>
+                <p>All articles, guides, and frameworks inside this library are uniquely curated and created by our team. You are encouraged to read, learn, and apply them in your life. However, you cannot copy, resell, or distribute our premium content on other websites, forums, or platforms without explicit permission.</p>
+
+                <div class="author-credit">
+                    <img src="../me.jpg" alt="Bharat Kumar Patel" class="author-avatar" width="60" height="60" loading="lazy" onerror="this.src='https://via.placeholder.com/60';">
+                    <div class="author-details">
+                        <span class="author-title">FOUNDER & AUTHOR</span>
+                        <h4 class="author-name">Bharat Kumar Patel</h4>
+                        <a href="mailto:ibbchoudhary@gmail.com" class="author-email">ibbchoudhary@gmail.com</a>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <footer class="app-footer">
+            <details class="editorial-accordion">
+                <summary class="accordion-header">THE MISSION</summary>
+                <div class="accordion-content">
+                    <p>In an era of noise and information overload, our mission is simple: to provide distilled, executable intellect for modern minds seeking rapid, high-quality growth without the fluff.</p>
+                    <p>Internet articles are often written for engagement, not execution. Every piece of content here undergoes a rigorous distillation process to provide only core actionable strategies.</p>
+                </div>
+            </details>
+
+            <div class="footer-credits">
+                <p>© 2026 RUN YOUR MIND · All rights reserved</p>
+            </div>
+        </footer>
+
+    </div>
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>

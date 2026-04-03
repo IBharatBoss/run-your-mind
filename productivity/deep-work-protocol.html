@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deep Work Protocol: 8 Hours in 3 | RUN YOUR MIND</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="page-shell" style="box-shadow: none; max-width: 900px;">
+        <header class="top-header editorial-header-flow">
+            <div class="header-left">
+                <a href="../index.html" class="back-to-library">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    <span class="back-text">Back to Library</span>
+                </a>
+            </div>
+            <div id="logo-container" class="logo-container">
+                <img src="../logo.png" onerror="this.onerror=null;this.src='../run-your-mind.png';" alt="Run Your Mind" class="top-logo" width="220" height="55" id="top-logo" style="width: 130px; min-width: 120px; margin: 0;">
+                <div id="founder-card" class="founder-card">
+                    <p>If you want to know your true character,<br>look at how you treat someone<br>who can do absolutely nothing for you.</p>
+                </div>
+                <button id="founder-close-btn" class="founder-close-btn" aria-label="Close image">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div class="header-right"></div>
+        </header>
+
+        <main class="editorial-article">
+            <article>
+                <header>
+                    <h1 class="serif-heading">Deep Work Protocol: How to Finish 8 Hours of Work in 3</h1>
+                    <p class="editorial-subtitle">Stop "acting" busy. Start producing results that actually matter.</p>
+                </header>
+
+                <p>Bhai, let's be real. Most of your "work day" is just a series of interruptions disguised as productivity.</p>
+                
+                <p>You check an email, reply to a WhatsApp ping, scroll a bit, and then try to "focus" again. <strong>Asliyat yeh hai</strong>—you aren't working; you are just twitching.</p>
+
+                <p>If you want to move the needle in your 20s, you need to master **Deep Work**. It's the only way to outrun the crowd.</p>
+
+                <h2 style="border-bottom-color: var(--accent-blue);">1. The Reality Check</h2>
+                <p>Shallow work is easy. Replying to DMs, fixing fonts, and attending "sync" meetings feels like work, but it creates zero value.</p>
+                <p>The world is obsessed with "Busy-ness." But **High-Quality Work Produced = (Time Spent) x (Intensity of Focus)**. If your intensity is zero because of notifications, your output is zero.</p>
+                <p>Every time you check your phone, it takes your brain nearly 20 minutes to get back into the "zone." Do the math—you're never actually in the zone.</p>
+
+                <h2 style="border-bottom-color: var(--accent-blue);">2. The "RYM" Strategy</h2>
+                <p>Deep work is like a muscle. You can't just flip a switch; you have to train for it.</p>
+                <p>The goal is to eliminate "Attention Residue." This means when you work, you work on **ONE** thing with 100% of your brain's processing power. No tabs, no music with lyrics, no "quick checks".</p>
+                <p>3 hours of this intense focus is worth more than 12 hours of distracted "hustle." This is how you win.</p>
+
+                <h2 style="border-bottom-color: var(--accent-mint);">3. The 10-Minute Action Plan</h2>
+                <ul>
+                    <li><strong>Step 1: The Phone Prison.</strong> Put your phone in another room. Not face down, not on silent—**another room**. Out of sight, out of mind.</li>
+                    <li><strong>Step 2: The 90-Minute Block.</strong> Set a timer for 90 minutes. Commit to one difficult task. If you get bored, sit with the boredom. Do not switch tabs.</li>
+                    <li><strong>Step 3: The Closing Ritual.</strong> When you're done, shut the laptop. No more "checking in." Your brain needs to know that the deep session is over so it can recover.</li>
+                </ul>
+
+                <h3>Final Thoughts</h3>
+                <p>In a world of distracted people, the person who can focus is a <strong>superhero</strong>. Be that person.</p>
+                
+                <div class="author-credit">
+                    <img src="../me.jpg" alt="Bharat Kumar Patel" class="author-avatar" width="60" height="60" loading="lazy" onerror="this.src='https://via.placeholder.com/60';">
+                    <div class="author-details">
+                        <span class="author-title">FOUNDER & AUTHOR</span>
+                        <h4 class="author-name">Bharat Kumar Patel</h4>
+                        <a href="mailto:ibbchoudhary@gmail.com" class="author-email">ibbchoudhary@gmail.com</a>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <footer class="app-footer">
+            <details class="editorial-accordion">
+                <summary class="accordion-header">THE MISSION</summary>
+                <div class="accordion-content">
+                    <p>In an era of noise and information overload, our mission is simple: to provide distilled, executable intellect for modern minds seeking rapid, high-quality growth without the fluff.</p>
+                    <p>Internet articles are often written for engagement, not execution. Every piece of content here undergoes a rigorous distillation process to provide only core actionable strategies.</p>
+                </div>
+            </details>
+            <div class="footer-credits">
+                <p>© 2026 RUN YOUR MIND · All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 'No To-Do List' System | RUN YOUR MIND</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.1/firebase-app-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.1/firebase-database-compat.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/10.8.1/firebase-auth-compat.js"></script>
+</head>
+<body>
+    <div class="page-shell" style="box-shadow: none; max-width: 900px;">
+        <header class="top-header editorial-header-flow">
+            <div class="header-left">
+                <a href="../index.html" class="back-to-library">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                    <span class="back-text">Back to Library</span>
+                </a>
+            </div>
+            <div id="logo-container" class="logo-container">
+                <img src="../logo.png" onerror="this.onerror=null;this.src='../run-your-mind.png';" alt="Run Your Mind" class="top-logo" width="220" height="55" id="top-logo" style="width: 130px; min-width: 120px; margin: 0;">
+                <div id="founder-card" class="founder-card">
+                    <p>If you want to know your true character,<br>look at how you treat someone<br>who can do absolutely nothing for you.</p>
+                </div>
+                <button id="founder-close-btn" class="founder-close-btn" aria-label="Close image">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M18 6L6 18M6 6l12 12"/></svg>
+                </button>
+            </div>
+            <div class="header-right"></div>
+        </header>
+
+        <main class="editorial-article">
+            <article>
+                <header>
+                    <h1 class="serif-heading">The 'No To-Do List' System: Why Your Lists are Making You Lazy</h1>
+                    <p class="editorial-subtitle">Your endless checklist is giving you fake dopamine and real anxiety. Let's fix how you work.</p>
+                </header>
+
+                <p>Look at your to-do list right now. Be honest. How many of those tasks have been sitting there for a week?</p>
+
+                <p><strong>Bhai, writing things down feels like work, but it’s not.</strong> It’s a psychological trap.</p>
+
+                <p>You get a tiny dopamine hit just by adding a task to the list, which tricks your brain into thinking you made progress. Then, you procrastinate.</p>
+
+                <h2 style="border-bottom-color: var(--accent-blue);">1. The Reality Check</h2>
+                <p>To-do lists are cemeteries for your goals. You wake up, see 15 random items, get overwhelmed, and end up watching YouTube instead.</p>
+                <p><strong>Asliyat yeh hai</strong> ki a to-do list lacks the most important variable of execution: Time. It tells you *what* to do, but ignores *when* and *how long* it will take.</p>
+                <p>As a result, you do the easy, useless tasks first (like replying to emails) just to cross something off, while the actual hard work gets ignored.</p>
+
+                <h2 style="border-bottom-color: var(--accent-blue);">2. The "RYM" Strategy</h2>
+                <p>High performers don't use to-do lists. They use their calendar. It’s called "Time-Blocking."</p>
+                <p>If a task doesn't have a specific date and time attached to it, it does not exist. <strong>Faltu</strong> tasks automatically drop off when you force yourself to assign them a real slot in your day.</p>
+                <p>When you block time, you stop making decisions all day. You just look at the calendar and execute the plan. You go from a dreamer to a machine.</p>
+
+                <h2 style="border-bottom-color: var(--accent-mint);">3. The 10-Minute Action Plan</h2>
+                <ul>
+                    <li><strong>Step 1: Burn the List.</strong> Delete your endless notes app checklist. It’s making you guilty and lazy.</li>
+                    <li><strong>Step 2: The "Big 3" Rule.</strong> Pick only 3 needle-moving tasks for tomorrow. If you finish these 3, the day is a massive win. Ignore everything else.</li>
+                    <li><strong>Step 3: Block the Calendar.</strong> Open Google Calendar. Put Task 1 from 9 AM to 11 AM. Put Task 2 from 12 PM to 1 PM. Treat these blocks like a doctor's appointment—non-negotiable.</li>
+                </ul>
+
+                <h3>Final Thoughts</h3>
+                <p>Stop managing your tasks. Start managing your time. <strong>Block it, then crush it.</strong></p>
+                
+                <div class="author-credit">
+                    <img src="../me.jpg" alt="Bharat Kumar Patel" class="author-avatar" width="60" height="60" loading="lazy" onerror="this.src='https://via.placeholder.com/60';">
+                    <div class="author-details">
+                        <span class="author-title">FOUNDER & AUTHOR</span>
+                        <h4 class="author-name">Bharat Kumar Patel</h4>
+                        <a href="mailto:ibbchoudhary@gmail.com" class="author-email">ibbchoudhary@gmail.com</a>
+                    </div>
+                </div>
+            </article>
+        </main>
+
+        <footer class="app-footer">
+            <details class="editorial-accordion">
+                <summary class="accordion-header">THE MISSION</summary>
+                <div class="accordion-content">
+                    <p>In an era of noise and information overload, our mission is simple: to provide distilled, executable intellect for modern minds seeking rapid, high-quality growth without the fluff.</p>
+                    <p>Internet articles are often written for engagement, not execution. Every piece of content here undergoes a rigorous distillation process to provide only core actionable strategies.</p>
+                </div>
+            </details>
+            <div class="footer-credits">
+                <p>© 2026 RUN YOUR MIND · All rights reserved</p>
+            </div>
+        </footer>
+    </div>
+    <script type="module" src="../js/app.js"></script>
+</body>
+</html>
