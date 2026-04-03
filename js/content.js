@@ -302,13 +302,12 @@ function createCard(item) {
     card.onclick = () => handleBookClick(item._key);
 
     const category = item.category ? escapeHtml(item.category) : '';
-    const freeBadge = item.is_free ? `<span style="font-size: 0.6rem; font-weight: 800; background: rgba(109, 173, 150, 0.15); color: var(--accent-sage); padding: 0.2rem 0.5rem; border-radius: 20px; margin-left: 10px;">FREE DEMO</span>` : '';
 
     card.innerHTML = `
         <div class="file-list-row">
             <div class="file-list-title-shell">
                 <h3 class="file-list-title">${escapeHtml(item.title || 'Untitled')}</h3>
-                ${(category || freeBadge) ? `<span class="file-list-category">${category}${freeBadge}</span>` : ''}
+                ${category ? `<span class="file-list-category">${category}</span>` : ''}
             </div>
             <span class="file-list-arrow" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -396,36 +395,36 @@ function escapeHtml(value) {
 
 /**
  * Secure content access:
- * 1. Checks if the article is marked as free demo (bypassing auth)
- * 2. Validates premium status locally if not free
- * 3. Fetches from content_urls/<key> on demand or via cache
- * 4. Opens the content targeting 'ReaderTab'
+ * 1. Validates premium status locally (no network call)
+ * 2. Checks if URL exists inline (legacy 'content' node data)
+ * 3. If not, fetches from content_urls/<key> on demand
+ * 4. Opens the content — URL never touches localStorage/sessionStorage
  */
 async function handleBookClick(articleKey) {
-    const clickedItem = allPublishedItems.find(item => item._key === articleKey);
-    const isFreeArticle = (clickedItem && clickedItem.is_free === true);
-
-    if (!isFreeArticle) {
-        const user = getLocalUser();
-        if (!user) {
-            window.dispatchEvent(new Event('open-auth-modal'));
-            return;
-        }
-
-        if (user.membership_status !== 'active') {
-            showToast('Your premium access is inactive. Please renew to continue.', 'info');
-            return;
-        }
-    }
-
-    if (clickedItem && clickedItem.file_url) {
-        window.open(clickedItem.file_url, 'ReaderTab');
+    const user = getLocalUser();
+    if (!user) {
+        window.dispatchEvent(new Event('open-auth-modal'));
         return;
     }
 
+    if (user.membership_status !== 'active') {
+        showToast('Your premium access is inactive. Please renew to continue.', 'info');
+        return;
+    }
+
+    // Check if the cached item already has a file_url (legacy data from 'content' node)
+    const cachedItem = allPublishedItems.find(item => item._key === articleKey);
+    if (cachedItem && cachedItem.file_url) {
+        window.open(cachedItem.file_url, 'ReaderTab');
+        return;
+    }
+
+    // New architecture: fetch URL on demand from content_urls/<key>
     const card = document.querySelector(`.content-card[data-key="${articleKey}"]`);
     const arrow = card ? card.querySelector('.file-list-arrow') : null;
-    if (arrow) arrow.innerHTML = '<span class="card-loading-dot"></span>';
+    if (arrow) {
+        arrow.innerHTML = '<span class="card-loading-dot"></span>';
+    }
 
     try {
         const snap = await db.ref(`${DB_PATHS.CONTENT_URLS}/${articleKey}`).once('value');
@@ -445,6 +444,7 @@ async function handleBookClick(articleKey) {
         showToast('Unable to load content. Please try again.', 'error');
     }
 
+    // Restore arrow
     if (arrow) {
         arrow.innerHTML = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>';
     }
