@@ -307,7 +307,10 @@ function createCard(item) {
         <div class="file-list-row">
             <div class="file-list-title-shell">
                 <h3 class="file-list-title">${escapeHtml(item.title || 'Untitled')}</h3>
-                ${category ? `<span class="file-list-category">${category}</span>` : ''}
+                <div style="display: flex; gap: 8px; align-items: center; margin-top: 4px;">
+                    ${category ? `<span class="file-list-category" style="margin-top: 0;">${category}</span>` : ''}
+                    ${item.is_free ? `<span class="file-list-category" style="margin-top: 0; background: var(--accent-mint); color: #000; font-weight: 700; border: none;">Free Demo</span>` : ''}
+                </div>
             </div>
             <span class="file-list-arrow" aria-hidden="true">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
