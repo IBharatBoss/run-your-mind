@@ -1797,3 +1797,87 @@ details[open] .accordion-header::after {
     display: block !important;
     visibility: visible !important;
 }
+
+
+/* ═══════════════════════════════════════════════════════
+   PREMIUM EDITORIAL SUPER CLASSES (For 10,000+ Articles)
+   ═══════════════════════════════════════════════════════ */
+
+/* 1. The Lead Paragraph (Hook) */
+.article-lead {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: var(--ink-soft);
+    font-weight: 500;
+    margin-bottom: var(--space-lg) !important;
+}
+
+/* 2. The Dropcap (Magazine Style First Letter) */
+.article-dropcap::first-letter {
+    font-family: var(--font-serif);
+    font-size: 4.5rem;
+    font-weight: 700;
+    color: var(--accent-coral);
+    float: left;
+    line-height: 0.8;
+    margin-right: 0.8rem;
+    margin-top: 0.2rem;
+}
+
+/* 3. Auto-Colored Headings (No Inline CSS needed anymore) */
+.editorial-article h2 {
+    position: relative;
+    border-bottom: none; /* Remove old border */
+    padding-bottom: 0.8rem;
+}
+.editorial-article h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--ink); /* Default dark underline */
+    border-radius: 2px;
+}
+/* Alternate heading colors by just adding a class */
+.editorial-article h2.blue-line::after { background: var(--accent-sky); }
+.editorial-article h2.mint-line::after { background: var(--accent-sage); }
+.editorial-article h2.gold-line::after { background: var(--accent-gold); }
+
+/* 4. Actionable Takeaway Box */
+.article-takeaway {
+    background: rgba(109, 173, 150, 0.08); /* Mint tint */
+    border-left: 4px solid var(--accent-sage);
+    padding: var(--space-md) var(--space-lg);
+    margin: var(--space-lg) 0;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+.article-takeaway h4 {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--accent-sage);
+    margin-bottom: 0.5rem;
+}
+
+/* 5. Clean Blockquotes */
+.article-quote {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    font-style: italic;
+    text-align: center;
+    color: var(--ink);
+    padding: var(--space-md) 0;
+    margin: var(--space-xl) auto;
+    max-width: 90%;
+    position: relative;
+}
+.article-quote::before, .article-quote::after {
+    content: '"';
+    color: var(--line-strong);
+    font-size: 3rem;
+    line-height: 0;
+    vertical-align: bottom;
+}
