@@ -1,1 +1,0 @@
-import{FIREBASE_CONFIG as i}from"./rules.js";let l,e,a,r;try{l=firebase.initializeApp(i),e=firebase.database(),a=firebase.auth(),r=new firebase.auth.GoogleAuthProvider}catch{console.warn("Firebase initialization deferred or unavailable."),e=null,a=null,r=null}export{a as auth,e as db,r as googleAuthProvider};
